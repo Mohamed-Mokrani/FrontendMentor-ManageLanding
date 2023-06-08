@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Be Vietnam Pro", sans-serif;
+  margin: 0;
+}
+.landing {
+  width: 100%;
+  height: 100vh;
+}
+ul,ol {
+  padding: 0;
+  list-style: none;
+}
+p{
+  color: hsla(227, 12%, 61%, 0.782);
+  line-height: 1.6;
+}
+
+/* *****************************************-NavBar-*************************************************** */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+  height: 11vh;
+  position: fixed;
+  background: hsl(0, 0%, 98%);
+  z-index: 99;
+  width: 100%;
+  top: 0;
+}
+.started_butt {
+  display: block;
+  background-color: hsl(12, 88%, 59%);
+  border: none;
+  outline: none;
+  color: hsl(0, 0%, 98%);
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  border-radius: 1.5em;
+  box-shadow: 2px 4px 10px hsla(12, 88%, 59%, 0.589);
+  padding: 1em 2.5em;
+}
+.started_butt:hover {
+  background-color: hsla(12, 88%, 59%, 0.716);
+}
+nav .started_butt {
+  display: none;
+}
+nav img {
+  cursor: pointer;
+}
+.nav_list {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  margin-top: 11vh;
+  background-color: rgba(0, 0, 0, 0.424);
+  padding: 0 8%;
+}
+.nav_open {
+  transform: translate(-100%);
+}
+nav ul {
+  background-color: hsl(0, 0%, 98%);
+  margin: 2vh auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em;
+  padding: 2.5em 0;
+  color: hsl(228, 39%, 23%);
+  font-weight: 700;
+  border-radius: 0.2em;
+}
+nav ul li:hover {
+  color: hsl(227, 12%, 61%);
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  .open_close {
+    display: none;
+  }
+  /* nav{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.264);
+  } */
+  .nav_list {
+    position: initial;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  nav ul {
+    background: hsl(0, 0%, 98%);
+    flex-direction: row;
+    padding: 0;
+    width: fit-content;
+    font-weight: 500;
+  }
+  nav .started_butt {
+    display: block;
+  }
+}
+
+/* *****************************************-End NavBar-*************************************************** */
+
+/* *****************************************-Section 1-*************************************************** */
+.section1 {
+  width: 100%;
+  padding: 11vh 8% 5vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.section1 h1 {
+  font-size: 2.1em;
+  margin: 0;
+  color: hsl(228, 39%, 23%);
+}
+
+.section1 button {
+  margin: 2em auto 0;
+}
+@media (min-width: 920px) {
+  .section1 {
+    height: 100vh;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .section1 div {
+    width: 40%;
+    text-align: start;
+  }
+  .section1 h1 {
+    font-size: 3em;
+  }
+  .section1 div button {
+    margin: 2em 0 0;
+  }
+}
+
+/* *****************************************-End Section 1-*************************************************** */
+
+/* *****************************************-Section 2-*************************************************** */
+.section2 {
+  width: 100%;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+}
+.why_manage {
+  text-align: center;
+  padding: 0 8%;
+}
+.why_manage h1 {
+  color: hsl(228, 39%, 23%);
+  font-size: 1.7em;
+  margin: 0;
+}
+
+.services {
+  padding: 5vh 0 0 2vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.service h4 {
+  background-color: hsl(13, 100%, 96%);
+  color: hsl(228, 39%, 23%);
+  padding: 0.5em 0;
+  font-size: 0.9em;
+}
+.nums {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(12, 88%, 59%);
+  padding: 0.5em 1.2em;
+  border-radius: 1em;
+  margin-right: 0.4em;
+}
+.nums_deskp{
+  display: none;
+}
+.service p{
+  font-size: .9em;
+}
+
+@media (min-width:900px){
+  .section2{
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0vh 8% 10vh;
+  }
+  .nums_deskp{
+    display: block;
+  }
+  .nums_mobile{
+    display: none;
+  }
+  .why_manage{
+    text-align: start;
+    width: 35%;
+    padding: 0;
+  }
+  .why_manage h1{
+    font-size: 1.8em;
+  }
+  .service{
+    display: flex;
+    align-items: first baseline;
+    gap: 1.2em;
+  }
+  .service h4{
+    background-color: transparent;
+    padding: 0;
+  }
+  .services{
+    width: 50%;
+    gap: 0;
+  }
+}
+/* *****************************************-End Section 2-*************************************************** */
+
+/* *****************************************-Section 3-*************************************************** */
+.section3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  padding: 3em 8%;
+}
+.section3 h1{
+  font-size: 1.8em;
+  color: hsl(228, 39%, 23%);
+}
+.person{
+  text-align: center;
+}
+.person h4{
+  color: hsl(228, 39%, 23%);
+}
+.person img{
+  width: 25%;
+}
+.section3 ul{
+  display: flex;
+}
+input[type='radio'] {
+  accent-color: hsl(12, 88%, 59%);
+}
+
+.persons_desktp{
+  display: none;
+}
+@media(min-width:900px){
+  .section3{
+    padding-bottom: 10em;
+  }
+  input[type='radio']{
+    display: none;
+  }
+  .persons{
+    display: none;
+  }
+  .persons_desktp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+  }
+  .persons_desktp .person{
+    max-width: calc(98%/3);
+    background-color: hsl(0, 0%, 98%);
+    padding: 0 1.5em;
+  }
+}
+/* *****************************************-End Section 3-*************************************************** */
+
+/* *****************************************-Add-*************************************************** */
+.add{
+  background-color: hsl(12, 88%, 59%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3em 8% ;
+  
+}
+.add button{
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(12, 88%, 59%);
+  font-weight: 700;
+}
+.add button:hover{
+  background-color: hsl(0, 0%, 98%);
+  color: hsla(12, 88%, 59%, 0.589) !important;
+}
+.add h1{
+  color: hsl(0, 0%, 98%);
+}
+@media(min-width:900px){
+  .add{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* *****************************************-End Add-*************************************************** */
+
+
+/* *****************************************-Footer-*************************************************** */
+footer{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(233, 12%, 13%);
+  padding: 3em 8% 1em;
+  gap: 3em;
+}
+footer img{
+  filter: invert(100%) sepia(99%) saturate(2%) hue-rotate(207deg) brightness(108%) contrast(100%);
+}
+footer button{
+  display: block !important;
+}
+.left_footer{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.social{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 1em;
+}
+.left_footer ul{
+  display: flex;
+  flex-direction: column;
+  gap: .8em;
+  text-align: center;
+  margin-top: 0;
+  font-size: .9em;
+  color: hsl(220, 16%, 96%);
+}
+.left_footer div ol{
+  display: flex;
+  gap: 1em;
+  color: white;
+  font-size: 2em;
+}
+.left_footer div li:hover{
+  color: hsl(12, 88%, 59%);
+  cursor: pointer;
+}
+.footer_lists{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_lists ul{
+  align-items: flex-start;
+}
+.right_footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer h5{
+  color: hsl(233, 8%, 62%);
+  font-weight: 400;
+  font-size: .8em;
+  margin-bottom: 0;
+}
+.formu{
+  display: flex;
+  gap: .5em;
+}
+.formu input{
+  border-radius: 2em;
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+}
+.copyright_deskp{
+  display: none;
+}
+@media (min-width:930px){
+  .copyright_mobile{
+    display: none;
+  }
+  .copyright_deskp{
+    display: block;
+  }
+  footer{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .left_footer{
+    flex-direction: row;
+    width: 50%;
+    gap: 3em;
+  }
+  .footer_lists{
+    width: fit-content;
+    gap: 2em;
+  }
+  .social{
+    flex-direction: column;
+  }
+  .social ol li {
+    font-size: 0.8em;
+  }
+  .left_footer ul{
+    text-align: start;
+  }
+  
+}
+/* *****************************************-End Footer-*************************************************** */
